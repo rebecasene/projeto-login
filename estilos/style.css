@@ -5,6 +5,7 @@
     --cor2: #5f2c82;
     --cor3: #ffffff;
     --cor4: #295f5d;
+    --cor5:#98ccca;
 }
 
 * {
@@ -31,11 +32,13 @@ section#login {
     top: 50%;
     left: 50%;
     overflow: hidden;
+    
     background-color: var(--cor3);
     width: 250px;
     height: 525px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+
     transform: translate(-50%, -50%);
     transition: width .3s, height .3s;
     transition-timing-function: ease;
@@ -68,17 +71,39 @@ div p {
 
 div.campo {
     background-color: var(--cor2);
-    color: var(--cor3);
+    border: 2px solid var(--cor2);
+    display: block;
     width: 100%;
     height: 40px;
-    padding: 10px;
+    border-radius: 8px;
     margin: 5px 0px;
-    border-radius: 5px;
-    
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > i {
+    color: var(--cor3);
+    font-size: 1.9em;
+    width: 40px;
+    padding: 5px;
+    
+}
+
+div.campo > input {
+    background-color: var(--cor5);
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-10px);
+}
+
+div.campo > input:focus-within {
+    background-color: var(--cor3);
 }
 
 form > input[type=submit] {
@@ -90,6 +115,7 @@ form > input[type=submit] {
     color: var(--cor3);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 form > input[type=submit]:hover {
